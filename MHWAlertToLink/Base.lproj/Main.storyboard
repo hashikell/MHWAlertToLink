@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhI-lC-1DI">
+                                <rect key="frame" x="238" y="128" width="125" height="30"/>
+                                <state key="normal" title="Show Alert to Link"/>
+                                <connections>
+                                    <action selector="onAlertToLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCz-jb-14U"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.example.com/" borderStyle="roundedRect" placeholder="Please enter a URL or URL Schemes." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KqV-au-YFh">
+                                <rect key="frame" x="20" y="68" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="onReturn:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="sef-xp-Kx6"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5j-85-iEm">
+                                <rect key="frame" x="235" y="174" width="131" height="30"/>
+                                <state key="normal" title="Open direct to Link"/>
+                                <connections>
+                                    <action selector="onOpenDirectToLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u77-QY-YXZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fhI-lC-1DI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="128" id="Cke-vZ-RkQ"/>
+                            <constraint firstItem="KqV-au-YFh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dna-H1-NK0"/>
+                            <constraint firstAttribute="trailing" secondItem="KqV-au-YFh" secondAttribute="trailing" constant="20" id="Gqh-i0-L9E"/>
+                            <constraint firstItem="KqV-au-YFh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="N9h-Dm-1Zc"/>
+                            <constraint firstItem="u5j-85-iEm" firstAttribute="top" secondItem="fhI-lC-1DI" secondAttribute="bottom" constant="16" id="cNg-XR-QUW"/>
+                            <constraint firstItem="KqV-au-YFh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ers-SO-gyR"/>
+                            <constraint firstItem="fhI-lC-1DI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jFs-zs-PSI"/>
+                            <constraint firstItem="u5j-85-iEm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kAU-CW-dAz"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jGl-Md-8IY" appends="YES" id="Cvm-lH-e3z"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="urlTextField" destination="KqV-au-YFh" id="YCc-Gq-7aZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jGl-Md-8IY">
+                    <connections>
+                        <action selector="onViewTap:" destination="BYZ-38-t0r" id="rr1-Un-hy6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
